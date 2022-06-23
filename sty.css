@@ -1,0 +1,247 @@
+body{
+	background-color: #151515;
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	overflow: hidden;
+
+	--blue: #3aa8c3;
+	--lightBlue: #0ff;
+	--spinAnimation: spin 23s cubic-bezier(.39,-0.52,.53,.98) 0s infinite;
+}
+
+#container{
+	width: 90vw;
+	height: 90vw;
+	max-width: 90vh;
+	max-height: 90vh;
+  	margin: auto;
+  	position: absolute;
+	top: 0; right: 0; bottom: 0; left: 0;
+}
+
+#portal{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+#portal > #mainGear{
+	position: absolute;
+	top:0px;
+	left:0px;
+	right: 0px;
+	bottom: 0px;
+	z-index: 1;
+	animation: var(--spinAnimation);
+	will-change: transform;
+	z-index: 100;
+}
+
+#mainGear > path{
+	fill:#735290;
+}
+
+
+#mainGear .decoration{
+	fill: var(--blue);
+	stroke: var(--blue);
+	stroke-width:1px;
+}
+
+#mainGear .runes path, #mainGear .runes circle{
+	fill: none;
+	stroke: var(--blue);
+	stroke-width: 2px;
+}
+
+#mainGear .runes path.filled, #mainGear .runes circle{
+	fill:var(--blue);
+}
+
+#portal > #innerGears{
+	position: absolute;
+	top:14.5%;
+	left:14.5%;
+	right: 14.5%;
+	bottom: 14.5%;
+	border-radius: 50%;
+	-webkit-clip-path: circle(50%);
+	overflow: hidden;
+}
+
+#portal > #innerGears > .innerGear{
+	position: absolute;
+	transform-origin: center;
+	animation: var(--spinAnimation);
+	will-change: transform;
+}
+
+.innerGear:nth-child(1){
+	width: 190%;
+	height: 190%;
+	bottom: -22%;
+	left: -45%;
+	z-index: 99;
+}
+.innerGear:nth-child(2){
+	width: 150%;
+	height: 150%;
+	bottom: -8%;
+	left: -16%;
+	z-index: 98;
+}
+
+.innerGear:nth-child(3){
+	width: 117%;
+	height: 117%;
+	top: -17%;
+	left: 3%;
+	z-index: 97;
+}
+
+.innerGear:nth-child(4){
+	width: 100%;
+	height: 100%;
+	top: -2%;
+	left: 12%;
+	z-index: 96;
+}
+
+.innerGear:nth-child(5){
+	width: 92%;
+	height: 92%;
+	top: 9.5%;
+	left: 15.5%;
+	z-index: 95;
+}
+
+.innerGear:nth-child(6){
+	width: 79.5%;
+	height: 79.5%;
+	top: 19.5%;
+	left: 17%;
+	z-index: 94;
+}
+
+.innerGear:nth-child(7){
+	width: 70%;
+	height: 70%;
+	top: 23.3%;
+	left: 17%;
+	z-index: 93;
+}
+
+.innerGear:nth-child(8){
+	width: 63%;
+	height: 63%;
+	top: 25%;
+	left: 15%;
+	z-index: 92;
+}
+
+.innerGear:nth-child(9){
+	width: 55%;
+	height: 55%;
+	top: 26%;
+	left: 18%;
+	z-index: 91;
+}
+
+.innerGear:nth-child(10){
+	width: 51%;
+	height: 51%;
+	top: 25%;
+	left: 18.5%;
+	z-index: 90;
+}
+
+.innerGear:nth-child(11){
+	width: 48%;
+	height: 48%;
+	top: 23.5%;
+	left: 21%;
+	z-index: 89;
+}
+
+.innerGear:nth-child(12){
+	width: 45%;
+	height: 45%;
+	top: 23%;
+	left: 24%;
+	z-index: 88;
+}
+
+.innerGear:nth-child(13){
+	width: 40%;
+	height: 40%;
+	top: 25.5%;
+	left: 29.2%;
+	z-index: 87;
+}
+
+.innerGear:nth-child(14){
+	width: 35%;
+	height: 35%;
+	top: 32%;
+	left: 34%;
+	z-index: 86;
+}
+
+.innerGear:nth-child(15){
+	width: 32%;
+	height: 32%;
+	top: 31%;
+	left: 35%;
+	z-index: 85;
+}
+
+.innerGear .teeth{
+	fill: url(#radial);
+	stroke-width: 5px;
+	stroke: var(--lightBlue);
+}
+
+.innerGear .runes path{
+	fill: var(--lightBlue);
+}
+
+@keyframes spin{
+	0%{transform: rotate(0deg);}
+
+	8%{transform: rotate(30deg);}
+	9%{transform: rotate(30deg);}
+
+	17%{transform: rotate(60deg);}
+	18%{transform: rotate(60deg);}
+
+	25%{transform: rotate(90deg);}
+	26%{transform: rotate(90deg);}
+
+	33%{transform: rotate(120deg);}
+	34%{transform: rotate(120deg);}
+
+	42%{transform: rotate(150deg);}
+	43%{transform: rotate(150deg);}
+
+	50%{transform: rotate(180deg);}
+	51%{transform: rotate(180deg);}
+
+	58%{transform: rotate(210deg);}
+	59%{transform: rotate(210deg);}
+
+	67%{transform: rotate(240deg);}
+	68%{transform: rotate(240deg);}
+
+	75%{transform: rotate(270deg);}
+	76%{transform: rotate(270deg);}
+
+	83%{transform: rotate(300deg);}
+	84%{transform: rotate(300deg);}
+
+	92%{transform: rotate(330deg);}
+	93%{transform: rotate(330deg);}
+
+	99%{transform: rotate(360deg);}
+	100%{transform: rotate(360deg);}
+}
